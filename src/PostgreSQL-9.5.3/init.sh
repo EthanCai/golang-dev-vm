@@ -44,7 +44,7 @@ sudo su - postgres -c "psql -d postgres -c \"GRANT ALL PRIVILEGES ON DATABASE sa
 
 # Install Go
 sudo echo "======Begin install golang======"
-sudo tar zxf /downloads/go1.9.linux-amd64.tar.gz -C /usr/local
+sudo tar zxf /downloads/go1.9.2.linux-amd64.tar.gz -C /usr/local
 sudo mkdir -p /home/vagrant/go
 sudo bash -c 'cat <<END > /etc/profile.d/golang.sh
 export GOROOT=/usr/local/go
