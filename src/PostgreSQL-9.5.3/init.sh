@@ -4,10 +4,6 @@
 sudo timedatectl list-timezones | grep Asia/Shanghai
 sudo timedatectl set-timezone Asia/Shanghai
 
-# Set proxy to speed up installations (OPTIONAL)
-export https_proxy="http://proxy.p1staff.com:1337"
-export http_proxy="http://proxy.p1staff.com:1337"
-
 # install required packages & softwares
 sudo yum install -y epel-release
 sudo yum update -y
