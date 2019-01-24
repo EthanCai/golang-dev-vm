@@ -19,7 +19,6 @@
 
 ```sh
 > # start vm
-> cd ./vm/Golang
 > vagrant up
 ```
 

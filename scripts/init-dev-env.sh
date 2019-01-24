@@ -13,5 +13,3 @@ sudo systemctl disable firewalld
 sudo yum install -y epel-release
 sudo yum groupinstall -y "Development Tools"
 sudo yum install -y wget vim net-tools telnet
-
-sudo yum update -y
