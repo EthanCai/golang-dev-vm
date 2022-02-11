@@ -45,7 +45,13 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
-    vb.memory = "1024"
+    vb.memory = "2048"
+  end
+
+  config.vm.provider "vmware_desktop" do |v|
+    v.gui = false
+    v.vmx["memsize"] = "2048"
+    v.vmx["numvcpus"] = "2"
   end
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
