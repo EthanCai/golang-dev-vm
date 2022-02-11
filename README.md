@@ -6,20 +6,30 @@
 
 安装依赖软件：
 
-- macOS Sierra Version 10.12.5
 - `homebrew`
 - `vagrantup`
-- `virualbox`
+- `vmware desktop`：参考 https://www.vagrantup.com/docs/providers/vmware
 
-下载依赖软件：
+下载依赖的box：
 
-- 执行`download.sh`下载Golang Linux Package: https://golang.org/dl/
+- `vagrant box add "CentOS/7" https://app.vagrantup.com/centos/boxes/7/versions/2004.01/providers/vmware_desktop.box`
 
-# 如何启动Golang开发环境
+注意：
+
+- vmware是收费软件，如果没有可以使用virtualbox
+
+# 启动环境
 
 ```sh
 > # start vm
-> vagrant up
+> vagrant up --provider vmware_desktop
+```
+
+# 配置开发环境
+
+```sh
+> # 升级git
+> cd /vagrant/scripts && sudo ./upgrade-git.sh
 ```
 
 # References
@@ -28,4 +38,4 @@
 - Discover Vagrant Boxes
   - https://atlas.hashicorp.com/boxes/search
   - http://www.vagrantbox.es/
-  
+
