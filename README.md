@@ -28,6 +28,10 @@
 # 配置开发环境
 
 ```sh
+> # 设置时区、关闭防火墙、安装基本工具
+> cd /vagrant/scripts && sudo ./init-dev-env.sh
+
+
 > # 升级git
 > cd /vagrant/scripts && sudo ./upgrade-git.sh
 ```
