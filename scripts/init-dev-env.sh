@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cat /etc/redhat-release
+
 # Set timezone
 sudo timedatectl list-timezones | grep Asia/Shanghai
 sudo timedatectl set-timezone Asia/Shanghai
