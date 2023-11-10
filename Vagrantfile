@@ -11,8 +11,8 @@ Vagrant.configure("2") do |config|
   # https://docs.vagrantup.com.
 
   # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "centos/7"
+  # boxes at https://app.vagrantup.com/boxes/search
+  config.vm.box = "generic/centos7"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  config.vm.synced_folder ".", "/vagrant"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -48,11 +48,11 @@ Vagrant.configure("2") do |config|
     vb.memory = "2048"
   end
 
-  config.vm.provider "vmware_desktop" do |v|
-    v.gui = false
-    v.vmx["memsize"] = "2048"
-    v.vmx["numvcpus"] = "2"
-  end
+  # config.vm.provider "vmware_desktop" do |v|
+  #   v.gui = false
+  #   v.vmx["memsize"] = "2048"
+  #   v.vmx["numvcpus"] = "2"
+  # end
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
@@ -72,6 +72,6 @@ Vagrant.configure("2") do |config|
   SHELL
 
   config.vm.provision "shell", run: "once", inline: <<-SHELL
-      
+
   SHELL
 end
