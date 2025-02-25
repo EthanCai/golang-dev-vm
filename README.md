@@ -10,9 +10,9 @@
 - `vagrantup`
 - `vmware desktop`：参考 https://www.vagrantup.com/docs/providers/vmware
 
-下载依赖的box：
+从[Vagrant Public Registry](https://portal.cloud.hashicorp.com/vagrant/discover)下载依赖的box：
 
-- `vagrant box add "CentOS/7" https://app.vagrantup.com/centos/boxes/7/versions/2004.01/providers/vmware_desktop.box`
+- `vagrant box add "generic/centos8_virtualbox_4.3.12" {file_path_of_vagrant_box}`
 
 注意：
 
@@ -22,7 +22,7 @@
 
 ```sh
 > # start vm
-> vagrant up --provider vmware_desktop
+> vagrant up --provider virtualbox
 ```
 
 # 配置开发环境
@@ -30,10 +30,6 @@
 ```sh
 > # 设置时区、关闭防火墙、安装基本工具
 > cd /vagrant/scripts && sudo ./init-dev-env.sh
-
-
-> # 升级git
-> cd /vagrant/scripts && sudo ./upgrade-git.sh
 ```
 
 # References
